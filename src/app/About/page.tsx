@@ -81,6 +81,15 @@ export default function About() {
   console.log(com2);
   //com2.getval();
 
+  interface Ival {
+    (val: string, fg: number): void;
+  }
+
+  const dc: Ival = (val, fg) => {
+    return (val = "dfdfd");
+  };
+  console.log(dc);
+
   //console.log(obj2);
   return <div>Hello about page for TypeScript</div>;
 }
