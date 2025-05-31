@@ -91,5 +91,63 @@ export default function About() {
   console.log(dc);
 
   //console.log(obj2);
+
+  function furitess<T>(names: T): T {
+    return names;
+  }
+  furitess("Apple");
+  furitess(123);
+  console.log(furitess(true));
+
+  function user<T>(data: T): T {
+    return data;
+  }
+
+  let u1 = user(["apple", "ab", 1, 3]);
+  //console.log(u1);
+
+  interface stu1 {
+    name: string;
+    email: string;
+    roll: number;
+    branch?: number;
+  }
+
+  const stuname: Partial<stu1> = {
+    name: "Gunnu",
+    email: "hainahi@gai.com",
+  };
+
+  function Getstu2(name: Partial<stu1>) {
+    return name;
+  }
+
+  //console.log(Getstu2({ roll: 25 }));
+  function Getstu3(name: Required<stu1>) {
+    return name;
+  }
+
+  //console.log(Getstu3({ name: "Rachit", email: "abcd", roll: 25, branch: 25 }));
+
+  const stu4: Readonly<stu1> = {
+    name: "Rachit",
+    email: "abcd",
+    roll: 25,
+    branch: 25,
+  };
+  //stu4.name="dfdf"
+  //console.log(stu4.name);
+
+  const stu5: Pick<stu1, "name" | "email"> = {
+    name: "Baulaal",
+    email: "abcd",
+  };
+  // console.log(stu5.name);
+  const stu6: Omit<stu1, "name" | "email"> = {
+    roll: 452,
+    branch: 25,
+  };
+  console.log(stu6.roll);
+
   return <div>Hello about page for TypeScript</div>;
 }
