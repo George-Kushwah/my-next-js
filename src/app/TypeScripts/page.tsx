@@ -88,7 +88,28 @@ function TypePage() {
   const com1 = new pendrive("HP");
   const com2 = new pendrive("WDD");
   const com3 = new portal("hp", "pl");
-  //console.log(com1, com2);
+  console.log(com1, com2, com3);
+
+  interface objepro {
+    name: string;
+    city: string;
+  }
+
+  const objfreeze: Readonly<objepro> = {
+    name: "Gunnu",
+    city: "Agra",
+  };
+  //objfreeze.name = "Harshit";
+  console.log(objfreeze);
+  //Tupple
+  let person: [string, number?] = ["ppp"];
+  person[0] = "Hello";
+  person[1] = 100;
+  //console.log(person);
+
+  let abs: [string, number];
+  abs = ["hello", 20];
+  console.log(abs);
 
   return <div>Only for Type Script console</div>;
 }

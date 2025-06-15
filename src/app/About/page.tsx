@@ -147,7 +147,7 @@ export default function About() {
     roll: 452,
     branch: 25,
   };
-  console.log(stu6.roll);
+  //console.log(stu6.roll);
 
   return <div>Hello about page for TypeScript</div>;
 }
