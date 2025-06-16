@@ -109,7 +109,14 @@ function TypePage() {
 
   let abs: [string, number];
   abs = ["hello", 20];
-  console.log(abs);
+  //console.log(abs);
+
+  let user1: tfood = { dish: "Sahi Paneer", price: 145, taste: "Good" };
+  function userobj<T>(val: T, key: keyof T) {
+    console.log(key);
+  }
+
+  userobj(user1, "dish");
 
   return <div>Only for Type Script console</div>;
 }
