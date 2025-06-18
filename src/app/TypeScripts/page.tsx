@@ -118,6 +118,12 @@ function TypePage() {
 
   userobj(user1, "dish");
 
+  function metge<T, U>(a: T, b: U): T & U {
+    return { ...a, ...b };
+  }
+
+  //console.log(metge({ a: "Hello" }, { age: 30 }));
+
   return <div>Only for Type Script console</div>;
 }
 
